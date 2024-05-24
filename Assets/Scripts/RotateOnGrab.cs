@@ -1,68 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class RotateOnGrab : MonoBehaviour
 {
+    public bool isGrabbed = false;
+    private Vector3 lastControllerPosition;
+    private Quaternion originalRotation;
+    private Rigidbody rb;
+    //private XRController controller;
 
-    [Header("Controller")]
-    public XRController xrController;
-    
-
-    [Header("Object")]
-    public GameObject rotatedObject;
-
-    [Header("Activation Settings")]
-    public float activationDistance;
-
-    private Quaternion currentRot;
-    private Vector3 startPos;
-    private bool offsetSet;
-
-    private void Start()
+    public GameObject controllerObject;
+    // Start is called before the first frame update
+    void Start()
     {
-        offsetSet = false;
+        //originalRotation = transform.rotation;
+        rb = GetComponent<Rigidbody>();
+        //controller = GetComponent<XRController>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (xrController.inputDevice. && triggerValue > 0 && IsCloseEnough())
-            Rotate();
-        else
-            offsetSet = false;
-
-        if (OVRInput.GetDown(resetRotationButton))
-            robot.transform.eulerAngles = Vector3.zero;
+        //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out bool gripValue) && gripValue)
+       
+        if (isGrabbed)
+        {
+            Vector3 controllerPosition = controllerObject.transform.position;//get current controller position
+            Vector3 rotationDelta = controllerPosition - lastControllerPosition;
+            Quaternion rotationChange = Quaternion.FromToRotation(Vector3.forward, rotationDelta.normalized);
+            transform.rotation *= rotationChange;
+            lastControllerPosition = controllerPosition;
+        }
+        
+        
     }
 
-    void SetOffsets()
+    public void GrabBegin(ActivateEventArgs arg)
     {
-        if (offsetSet)
-            return;
-
-        startPos = Vector3.Normalize(transform.position - robot.transform.position);
-        currentRot = robot.transform.rotation;
-
-        offsetSet = true;
+        isGrabbed=true;
+        Debug.Log("Begin is used!");
+        rb.isKinematic=true;
+        lastControllerPosition = controllerObject.transform.position;// get initial position of controller
     }
 
-    void Rotate()
+    public void GrabEnd(DeactivateEventArgs arg)
     {
-        SetOffsets();
-
-        Vector3 closestPoint = Vector3.Normalize(transform.position - robot.transform.position);
-        robot.transform.rotation = Quaternion.FromToRotation(startPos, closestPoint) * currentRot;
-    }
-
-    bool IsCloseEnough()
-    {
-        if (Mathf.Abs(Vector3.Distance(transform.position, robot.transform.position)) < activationDistance)
-            return true;
-
-        return false;
+        isGrabbed = false;
+        rb.isKinematic =false;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 }
