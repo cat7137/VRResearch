@@ -8,23 +8,26 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class TimerButton : MonoBehaviour
 {
-    private Timer timer;
-    
-    public GameObject timerButton;
+    public Timer timer;
+    public GameObject timerOnButton;
     public InputActionReference rightControllerTriggerPressed;
     public InputActionReference leftControllerTriggerPressed;
     public bool turnOn = false;
+    private XRBaseInteractable interactable;
 
 
     private void Awake()
     {
         rightControllerTriggerPressed.action.Enable();
         leftControllerTriggerPressed.action.Enable();
-        rightControllerTriggerPressed.action.performed += ToggleTimer;
-        leftControllerTriggerPressed.action.performed += ToggleTimer;
-        turnOn = !turnOn;
         
+        //rightControllerTriggerPressed.action.performed += ToggleTimer;
+        //leftControllerTriggerPressed.action.performed += ToggleTimer;
+        
+
     }
+
+    
 
     private void OnDisable()
     {
@@ -36,15 +39,12 @@ public class TimerButton : MonoBehaviour
 
     private void ToggleTimer(InputAction.CallbackContext context)
     {
-        //timerButton.SetActive(!timerButton.activeSelf);
+        //timerOnButton.SetActive(!timerOnButton.activeSelf);
         if (turnOn)
         {
-            timer = timerButton.GetComponent<Timer>();
+            
+            //timer = timerOnButton.GetComponent<Timer>();
             timer.TurnTimerOn();
-        }
-        else
-        {
-            timer.TurnTimerOff();
         }
     }
 
@@ -53,7 +53,15 @@ public class TimerButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        interactable = GetComponent<XRBaseInteractable>();
+        interactable.hoverEntered.AddListener(TurnOn);
+    }
+
+    private void TurnOn(HoverEnterEventArgs arg0)
+    {
+        turnOn = true;
+        rightControllerTriggerPressed.action.performed += ToggleTimer;
+        leftControllerTriggerPressed.action.performed += ToggleTimer;
     }
 
     // Update is called once per frame
