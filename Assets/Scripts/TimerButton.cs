@@ -13,7 +13,7 @@ public class TimerButton : MonoBehaviour
     public GameObject timerButton;
     public InputActionReference rightControllerTriggerPressed;
     public InputActionReference leftControllerTriggerPressed;
-    private bool turnOn = false;
+    public bool turnOn = false;
 
 
     private void Awake()
@@ -37,10 +37,14 @@ public class TimerButton : MonoBehaviour
     private void ToggleTimer(InputAction.CallbackContext context)
     {
         //timerButton.SetActive(!timerButton.activeSelf);
-        if (timerButton.activeSelf)
+        if (turnOn)
         {
             timer = timerButton.GetComponent<Timer>();
             timer.TurnTimerOn();
+        }
+        else
+        {
+            timer.TurnTimerOff();
         }
     }
 

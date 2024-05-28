@@ -23,6 +23,9 @@ public class Timer : MonoBehaviour
     public void TurnTimerOff()
     {
         isOn = false;
+        int minutes = Mathf.FloorToInt(timeElapsed / 60);
+        int seconds = Mathf.FloorToInt(minutes % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     // Update is called once per frame
     void Update()
