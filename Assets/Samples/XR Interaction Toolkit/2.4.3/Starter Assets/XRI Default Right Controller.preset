@@ -306,7 +306,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActivateAction.m_Action.m_Name
-    value: 
+    value: Activate
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActivateAction.m_Action.m_Type
@@ -318,7 +318,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActivateAction.m_Action.m_Id
-    value: 
+    value: 7dbbe257-deff-4027-9141-837ddbd3d944
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActivateAction.m_Action.m_Processors

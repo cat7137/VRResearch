@@ -6,7 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SwitchObject : MonoBehaviour
 {
-    public GameObject[] gameObjects;
+
+    public List<GameObject> objects;
     public GameObject object1;
     public GameObject object2;
     public GameObject object3;
@@ -15,28 +16,20 @@ public class SwitchObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObjects = new GameObject[3];
-        gameObjects[0] = object1;
-        gameObjects[1] = object2;
-        gameObjects[2] = object3;
-        gameObjects[0].SetActive(true);
-        gameObjects[1].SetActive(false);
-        gameObjects[2].SetActive(false);
+        object1.SetActive(true);
+        object2.SetActive(false); 
+        object3.SetActive(false);
+        objects = new List<GameObject>();
+        objects.Add(object1);
+        objects.Add(object2);
+        objects.Add(object3);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (buttonPressed)
-        {
-            GameObject temp = gameObjects[0];
-            gameObjects[0] = gameObjects[1];
-            gameObjects[0].SetActive(true);
-            gameObjects[1] = gameObjects[2];
-            gameObjects[2] = temp;
-            gameObjects[2].SetActive(false);
-            buttonPressed = false;
-        }
+        
     }
 
     private void Awake()
@@ -49,6 +42,16 @@ public class SwitchObject : MonoBehaviour
     private void ButtonPushed(InputAction.CallbackContext context)
     {
         buttonPressed = true;
+        if (buttonPressed)
+        {
+            objects[0].SetActive(false);
+            objects.RemoveAt(0);
+            objects[0].SetActive(true);
+            buttonPressed = false;
+
+
+
+        }
     }
 
     private void OnDisable()
