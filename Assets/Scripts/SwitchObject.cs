@@ -6,18 +6,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SwitchObject : MonoBehaviour
 {
-
+    public GameObject controller;
     public List<GameObject> objects;
-    public GameObject object1;
-    public GameObject object2;
-    public GameObject object3;
     public InputActionReference switchButton;
     public bool buttonPressed = false;
 
     private void Awake()
     {
+
         switchButton.action.Enable();
         switchButton.action.performed += ButtonPushed;
+       
     }
 
     private void OnDisable()
@@ -29,28 +28,17 @@ public class SwitchObject : MonoBehaviour
 // Start is called before the first frame update
 void Start()
     {
-        object1.SetActive(true);
-        object2.SetActive(false); 
-        object3.SetActive(false);
-        objects = new List<GameObject>();
-        objects.Add(object1);
-        objects.Add(object2);
-        objects.Add(object3);
+       
+        //objects = new List<GameObject>(3);
+        objects[0].SetActive(true);
+        objects[1].SetActive(false);
+        objects[2].SetActive(false);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-   
-
-
-    private void ButtonPushed(InputAction.CallbackContext context)
-    {
-        buttonPressed = true;
         if (buttonPressed)
         {
             objects[0].SetActive(false);
@@ -61,6 +49,24 @@ void Start()
 
 
         }
+    }
+
+   
+
+
+    private void ButtonPushed(InputAction.CallbackContext context)
+    {
+        buttonPressed = true;
+       // if (buttonPressed)
+       // {
+           // objects[0].SetActive(false);
+           // objects.RemoveAt(0);
+           // objects[0].SetActive(true);
+           // buttonPressed = false;
+
+
+
+       // }
     }
 
     
