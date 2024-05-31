@@ -13,8 +13,21 @@ public class SwitchObject : MonoBehaviour
     public GameObject object3;
     public InputActionReference switchButton;
     public bool buttonPressed = false;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
+    {
+        switchButton.action.Enable();
+        switchButton.action.performed += ButtonPushed;
+    }
+
+    private void OnDisable()
+    {
+        switchButton.action.Disable();
+        switchButton.action.performed -= ButtonPushed;
+    }
+
+// Start is called before the first frame update
+void Start()
     {
         object1.SetActive(true);
         object2.SetActive(false); 
@@ -32,11 +45,7 @@ public class SwitchObject : MonoBehaviour
         
     }
 
-    private void Awake()
-    {
-        switchButton.action.Enable();
-        switchButton.action.performed += ButtonPushed;
-    }
+   
 
 
     private void ButtonPushed(InputAction.CallbackContext context)
@@ -54,9 +63,5 @@ public class SwitchObject : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        switchButton.action.Disable(); 
-        switchButton.action.performed -= ButtonPushed;
-    }
+    
 }
