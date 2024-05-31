@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4564216430282282028, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5280071390499214566, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_fontStyle
       value: 0
@@ -741,6 +745,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 227390803}
+    - targetCorrespondingSourceObject: {fileID: 9014170785475729474, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1395086477}
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
 --- !u!1 &227390801 stripped
 GameObject:
@@ -890,24 +897,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5617946541251418852, guid: bb5fded9f99da1749a2f070686237015, type: 3}
   m_PrefabInstance: {fileID: 1024502869}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &297287192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297287190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects: []
-  object1: {fileID: 302068067}
-  object2: {fileID: 1374917041}
-  object3: {fileID: 297287190}
-  switchButton: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  buttonPressed: 0
 --- !u!114 &297287196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,24 +1077,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
   m_PrefabInstance: {fileID: 304751479}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &302068068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302068067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects: []
-  object1: {fileID: 302068067}
-  object2: {fileID: 1374917041}
-  object3: {fileID: 297287190}
-  switchButton: {fileID: 4812140287255140587, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  buttonPressed: 0
 --- !u!114 &302068069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,9 +1359,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 302068069}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 302068068}
   m_SourcePrefab: {fileID: 100100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
 --- !u!1001 &320198279
 PrefabInstance:
@@ -2061,9 +2029,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1374917042}
     - targetCorrespondingSourceObject: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1374917048}
@@ -3283,9 +3248,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8911969753157478647, guid: bb5fded9f99da1749a2f070686237015, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 297287192}
-    - targetCorrespondingSourceObject: {fileID: 8911969753157478647, guid: bb5fded9f99da1749a2f070686237015, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 297287197}
     - targetCorrespondingSourceObject: {fileID: 8911969753157478647, guid: bb5fded9f99da1749a2f070686237015, type: 3}
       insertIndex: -1
@@ -3975,24 +3937,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
   m_PrefabInstance: {fileID: 546833237}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1374917042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374917041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects: []
-  object1: {fileID: 302068067}
-  object2: {fileID: 1374917041}
-  object3: {fileID: 297287190}
-  switchButton: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  buttonPressed: 0
 --- !u!4 &1374917046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6522259694020573753, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
@@ -4173,6 +4117,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!1 &1395086472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9014170785475729474, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+  m_PrefabInstance: {fileID: 227390799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395086477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395086472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1395086472}
+  objects:
+  - {fileID: 302068067}
+  - {fileID: 1374917041}
+  - {fileID: 297287190}
+  switchButton: {fileID: 6553891122579672621, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  buttonPressed: 0
 --- !u!1001 &1418245132
 PrefabInstance:
   m_ObjectHideFlags: 0
