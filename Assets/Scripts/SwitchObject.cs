@@ -41,10 +41,15 @@ void Start()
     {
         if (buttonPressed)
         {
-            objects[0].SetActive(false);
-            objects.RemoveAt(0);
-            objects[0].SetActive(true);
-            buttonPressed = false;
+            
+                objects[0].SetActive(false);
+            if (objects.Count > 1)
+            {
+                objects.RemoveAt(0);
+                objects[0].SetActive(true);
+                buttonPressed = false;
+            }
+            
 
 
 
