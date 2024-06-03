@@ -1262,25 +1262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-<<<<<<< Updated upstream
---- !u!1 &265276151 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9014170783705847997, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-  m_PrefabInstance: {fileID: 227390799}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &265276152 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3763490779230425874, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-  m_PrefabInstance: {fileID: 227390799}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7f6a4259c6958e4dac42af62bceb86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &265276153
-=======
 --- !u!1 &230011773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,23 +1303,11 @@ RectTransform:
   m_SizeDelta: {x: 35, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230011775
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 265276151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 723dc2e702157ae4a9013ccdf3df510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 265276152}
-  rightControllerButtonPressed: {fileID: -6034058784582328911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  turnOff: 0
-=======
   m_GameObject: {fileID: 230011773}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1720,7 +1689,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288923788}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1001 &291248809
 PrefabInstance:
   m_ObjectHideFlags: 0
