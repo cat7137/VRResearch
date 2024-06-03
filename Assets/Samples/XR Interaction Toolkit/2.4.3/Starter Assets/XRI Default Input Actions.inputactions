@@ -730,6 +730,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "StartTimer",
+                    "type": "Button",
+                    "id": "92b95310-5093-4042-bfe5-ad4084f1b06a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -884,6 +893,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e70fe1bd-2af4-481a-a329-8e83d928e71e",
+                    "path": "*/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "StartTimer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1477,6 +1497,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TimerOff",
+                    "type": "Button",
+                    "id": "bf034955-9ccc-40c0-a6ff-719897da3f1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1620,6 +1649,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0fb1bbfe-1c8f-415f-82d4-ad6b6343577c",
+                    "path": "*/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "TimerOff",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
