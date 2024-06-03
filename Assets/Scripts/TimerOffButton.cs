@@ -8,22 +8,22 @@ public class TimerOffButton : MonoBehaviour
 {
     public Timer timer;
     public GameObject timerOffButton;
-    public InputActionReference rightControllerTriggerPressed;
-    public InputActionReference leftControllerTriggerPressed;
+    public InputActionReference rightControllerButtonPressed;
+    //public InputActionReference leftControllerTriggerPressed;
     public bool turnOff = false;
     private XRBaseInteractable interactable;
 
 
     private void Awake()
     {
-        rightControllerTriggerPressed.action.Enable();
-        leftControllerTriggerPressed.action.Enable();
+        rightControllerButtonPressed.action.Enable();
+        
     }
 
     private void OnDisable()
     {
-        rightControllerTriggerPressed.action.Disable();
-        leftControllerTriggerPressed.action.Disable();
+        rightControllerButtonPressed.action.Disable();
+        
     }
 
     private void ToggleTimer(InputAction.CallbackContext context)
@@ -47,8 +47,8 @@ public class TimerOffButton : MonoBehaviour
     private void TurnOff(HoverEnterEventArgs arg0)
     {
         turnOff = true;
-        rightControllerTriggerPressed.action.performed += ToggleTimer;
-        leftControllerTriggerPressed.action.performed += ToggleTimer;
+        rightControllerButtonPressed.action.performed += ToggleTimer;
+        
     }
 
     // Update is called once per frame

@@ -10,16 +10,16 @@ public class TimerButton : MonoBehaviour
 {
     public Timer timer;
     public GameObject timerOnButton;
-    public InputActionReference rightControllerTriggerPressed;
-    public InputActionReference leftControllerTriggerPressed;
+    //public InputActionReference rightControllerTriggerPressed;
+    public InputActionReference leftControllerButtonPressed;
     public bool turnOn = false;
     private XRBaseInteractable interactable;
 
 
     private void Awake()
     {
-        rightControllerTriggerPressed.action.Enable();
-        leftControllerTriggerPressed.action.Enable();
+        
+        leftControllerButtonPressed.action.Enable();
         
         //rightControllerTriggerPressed.action.performed += ToggleTimer;
         //leftControllerTriggerPressed.action.performed += ToggleTimer;
@@ -31,10 +31,9 @@ public class TimerButton : MonoBehaviour
 
     private void OnDisable()
     {
-        rightControllerTriggerPressed.action.Disable();
-        leftControllerTriggerPressed.action.Disable();
-        rightControllerTriggerPressed.action.performed -= ToggleTimer;
-        leftControllerTriggerPressed.action.performed -= ToggleTimer;
+        
+        leftControllerButtonPressed.action.Disable();
+        leftControllerButtonPressed.action.performed -= ToggleTimer;
     }
 
     private void ToggleTimer(InputAction.CallbackContext context)
@@ -60,8 +59,7 @@ public class TimerButton : MonoBehaviour
     private void TurnOn(HoverEnterEventArgs arg0)
     {
         turnOn = true;
-        rightControllerTriggerPressed.action.performed += ToggleTimer;
-        leftControllerTriggerPressed.action.performed += ToggleTimer;
+        leftControllerButtonPressed.action.performed += ToggleTimer;
     }
 
     // Update is called once per frame

@@ -919,6 +919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1624,6 +1628,10 @@ PrefabInstance:
     - target: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
       propertyPath: m_Name
       value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7843266666466592810, guid: f5c374383c14e2d4390d81113ab85195, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2871,6 +2879,10 @@ PrefabInstance:
       value: Mouse
       objectReference: {fileID: 0}
     - target: {fileID: 8911969753157478647, guid: bb5fded9f99da1749a2f070686237015, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911969753157478647, guid: bb5fded9f99da1749a2f070686237015, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -3580,7 +3592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395086472}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
   m_Name: 
