@@ -888,7 +888,7 @@
                 {
                     "name": "",
                     "id": "0e594a6c-059b-4f62-a4bd-4957be04092b",
-                    "path": "*/{PrimaryButton}",
+                    "path": "<ViveController>{LeftHand}/trackpadClicked",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
