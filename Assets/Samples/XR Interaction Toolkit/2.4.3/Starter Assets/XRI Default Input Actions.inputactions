@@ -1506,6 +1506,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Switch ",
+                    "type": "Button",
+                    "id": "c5a16b45-1f68-4066-a392-eec61fc61ce4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1660,6 +1669,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "TimerOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa251711-a444-4519-be02-d8c7a3083135",
+                    "path": "<ViveController>/trackpadClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Switch ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
