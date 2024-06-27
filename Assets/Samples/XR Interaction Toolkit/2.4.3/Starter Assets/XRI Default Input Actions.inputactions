@@ -190,6 +190,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "4a0c1ec3-b95d-4e2f-9c5d-4150dc319a29",
+                    "path": "<EyeGaze>/pose/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Eye Gaze Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Integer Fallback",
                     "id": "1a6685cf-ae82-4f22-a967-75610a8e71ed",
                     "path": "IntegerFallback",
