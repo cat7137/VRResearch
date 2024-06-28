@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.XR;
 using System.IO;
 using System.IO.Enumeration;
-
-
+using VIVE.OpenXR.FacialTracking;
+using UnityEngine.XR.OpenXR;
 
 public class EyeDataCollection : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class EyeDataCollection : MonoBehaviour
     private static List<string> eyeData;
     private Vector3 gazeDirection;
     private InputDevice eyeTrackingDevice;
+    private static float[] eyeExps = new float[(int)XrEyeExpressionHTC.XR_EYE_EXPRESSION_MAX_ENUM_HTC];
     
     
 
@@ -47,6 +48,14 @@ public class EyeDataCollection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var feature = OpenXRSettings.Instance.GetFeature<ViveFacialTracking>();
+        if (feature != null)
+        {
+            if (feature.GetFacialExpressions(XrFacialTrackingTypeHTC.XR_FACIAL_TRACKING_TYPE_EYE_DEFAULT_HTC, out float[] exps))
+            {
+                eyeExps = exps;
+            }
+        }
         gazeDirection = Vector3.zero;
         if (eyeTrackingDevice != null )
         {
