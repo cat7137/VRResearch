@@ -43,9 +43,9 @@
                 },
                 {
                     "name": "Eye Gaze Position",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "dde820a2-0462-4756-be47-630b5b56c115",
-                    "expectedControlType": "Vector3",
+                    "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -191,8 +191,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4a0c1ec3-b95d-4e2f-9c5d-4150dc319a29",
-                    "path": "<EyeGaze>/pose/position",
+                    "id": "1331c18a-bffd-423e-a5c6-9331eb55753e",
+                    "path": "<XRInputV1::EyeTrackingOpenXR>/pose",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",

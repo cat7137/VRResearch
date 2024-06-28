@@ -31,10 +31,7 @@ public class EyeDataCollection : MonoBehaviour
             eyeTrackingDevice = inputDevices[0];
             Debug.Log("Eye Tracker Initialized");
         }
-        else
-        {
-            Debug.LogError("No eye Tracking Device Found!");
-        }
+       
         filePath = Path.Combine(Application.dataPath, "EyeTrackingData.txt");
         writer = new StreamWriter(filePath);
         writer.WriteLine("LeftEyeGazePosition,RightEyeGazePosition");
