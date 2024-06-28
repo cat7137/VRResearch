@@ -15,4 +15,12 @@ EditorBuildSettings:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a49cadc1a815591479693b955ccf08c1, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9ea069d0eacdd08458ad71cf943e134e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1a4c68ca72a83449f938d669337cb305, type: 2}
+<<<<<<< Updated upstream
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bbac7cf709de0f24ab72236163a3ad04, type: 2}
+=======
+<<<<<<< HEAD
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: dad7c305cce8ee445af9bfb02a50e1a8, type: 2}
+=======
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bbac7cf709de0f24ab72236163a3ad04, type: 2}
+>>>>>>> c2e9323a8fbad8ebfeb2100f633dce49e4f44678
+>>>>>>> Stashed changes
