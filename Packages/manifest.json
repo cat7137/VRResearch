@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.tobii.xr.sdk": "file:D:/Profiles/cat7137/Downloads/TobiiXRSDK_3.0.1.179",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.development": "1.0.1",
     "com.unity.feature.vr": "1.0.0",
