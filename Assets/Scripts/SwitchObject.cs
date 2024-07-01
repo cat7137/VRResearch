@@ -1,36 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class SwitchObject : MonoBehaviour
 {
-    public GameObject controller;
+    [SerializeField]
+    public GameObject UIButton;
+    [SerializeField]
     public List<GameObject> objects;
-    public InputActionReference switchButton;
+    [SerializeField]
+    //public InputActionReference switchButton;
+    private Button btn = null;
     public bool buttonPressed = false;
+    [SerializeField]
+    public int buttonIndex = 0;
 
     private void Awake()
     {
-
-        switchButton.action.Enable();
-        switchButton.action.performed += ButtonPushed;
+        btn.onClick.AddListener(ButtonPushed);
+        //switchButton.action.Enable();
+       // switchButton.action.performed += ButtonPushed;
        
     }
 
-    private void OnDisable()
-    {
-        switchButton.action.Disable();
-        switchButton.action.performed -= ButtonPushed;
-    }
+   
+
+    //private void OnDisable()
+   // {
+       // switchButton.action.Disable();
+       // switchButton.action.performed -= ButtonPushed;
+    //}
 
 // Start is called before the first frame update
 void Start()
     {
-       
+        
         //objects = new List<GameObject>(3);
-        objects[0].SetActive(true);
+        objects[0].SetActive(false);
         objects[1].SetActive(false);
         objects[2].SetActive(false);
         
@@ -41,13 +51,21 @@ void Start()
     {
         if (buttonPressed)
         {
-            
-                objects[0].SetActive(false);
-            if (objects.Count > 1)
+            if (buttonIndex == 0)
             {
-                objects.RemoveAt(0);
                 objects[0].SetActive(true);
+                buttonIndex = 1;
                 buttonPressed = false;
+            }
+            else
+            {
+                objects[0].SetActive(false);
+                if (objects.Count > 1)
+                {
+                    objects.RemoveAt(0);
+                    objects[0].SetActive(true);
+                    buttonPressed = false;
+                }
             }
             
 
@@ -59,7 +77,7 @@ void Start()
    
 
 
-    private void ButtonPushed(InputAction.CallbackContext context)
+    private void ButtonPushed()
     {
         buttonPressed = true;
        // if (buttonPressed)

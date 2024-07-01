@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.XR;
 using System.IO;
 using System.IO.Enumeration;
-using VIVE.OpenXR.FacialTracking;
-using UnityEngine.XR.OpenXR;
+using ViveSR.anipal.Eye;
+using System.Runtime.InteropServices;
 
 public class EyeDataCollection : MonoBehaviour
 {
@@ -13,10 +13,10 @@ public class EyeDataCollection : MonoBehaviour
    
     private string filePath;
     private StreamWriter writer;
-    private static List<string> eyeData;
-    private Vector3 gazeDirection;
-    private InputDevice eyeTrackingDevice;
-    private static float[] eyeExps = new float[(int)XrEyeExpressionHTC.XR_EYE_EXPRESSION_MAX_ENUM_HTC];
+    private static List<string> eyeDatas;
+    private static  EyeData eyeData = new EyeData();
+    private static bool eye_callback_registered = false;
+
     
     
 
@@ -24,19 +24,11 @@ public class EyeDataCollection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<InputDevice> inputDevices = new List<InputDevice>();
-        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.EyeTracking, inputDevices);
-        if(inputDevices.Count > 0)
-        {
-            
-            eyeTrackingDevice = inputDevices[0];
-            Debug.Log("Eye Tracker Initialized");
-        }
-       
+        
         filePath = Path.Combine(Application.dataPath, "EyeTrackingData.txt");
         writer = new StreamWriter(filePath);
-        writer.WriteLine("LeftEyeGazePosition,RightEyeGazePosition");
-        eyeData = new List<string>();
+        writer.WriteLine("LeftGazeDirection,RightGazeDirection,CombinedConvergenceDistance");
+        eyeDatas = new List<string>();
         
     }
 
@@ -48,39 +40,63 @@ public class EyeDataCollection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var feature = OpenXRSettings.Instance.GetFeature<ViveFacialTracking>();
-        if (feature != null)
+        if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING) return;
+        if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == true && eye_callback_registered == false)
         {
-            if (feature.GetFacialExpressions(XrFacialTrackingTypeHTC.XR_FACIAL_TRACKING_TYPE_EYE_DEFAULT_HTC, out float[] exps))
-            {
-                eyeExps = exps;
-            }
+            SRanipal_Eye.WrapperRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye.CallbackBasic)EyeCallBack));
+            eye_callback_registered = true;
         }
-        gazeDirection = Vector3.zero;
-        if (eyeTrackingDevice != null )
+        else if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == false && eye_callback_registered == true)
         {
-            InputFeatureUsage<Vector3> eyeGazeDirectionUsage = new InputFeatureUsage<Vector3>("eyeGazeDirection");
-            if(eyeTrackingDevice.TryGetFeatureValue(eyeGazeDirectionUsage, out Vector3 gaze))
-            {
-                gazeDirection = gaze;
-                string dataToWrite = $"{gazeDirection}";
-                eyeData.Add(dataToWrite);
-            }
+            SRanipal_Eye.WrapperUnRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye.CallbackBasic)EyeCallBack));
+            eye_callback_registered = false;
         }
     }
  
-   
-
-    private void OnApplicationQuit()
+   private static void Release()
     {
-        
+        if (eye_callback_registered == true)
+        {
+            SRanipal_Eye.WrapperUnRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye.CallbackBasic)EyeCallBack));
+            eye_callback_registered = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        Release();
+    }
+
+    void OnApplicationQuit()
+    {
+        Release();
         if (writer!= null)
         {
-            foreach (string data in eyeData)
+            foreach (string data in eyeDatas)
             {
                 writer.WriteLine(data);
             }
             writer.Close();
         }
+    }
+    internal class MonoPInvokeCallbackAttribute : System.Attribute
+    {
+        public MonoPInvokeCallbackAttribute() { }
+    }
+
+    /// <summary>
+    /// Eye tracking data callback thread
+    /// Reports data at ~120hz
+    /// MonoPInvokeCallback attribute required for IL2CPP scripting backend
+    /// </summary>
+    /// <param name="eye_data">Reference to latest eye_data</param>
+    [MonoPInvokeCallback]
+    private static void EyeCallBack(ref EyeData eye_data)
+    {
+        eyeData = eye_data;
+        string dataToWrite = $"{eyeData.verbose_data.left.gaze_direction_normalized},{eyeData.verbose_data.right.gaze_direction_normalized},{eyeData.verbose_data.combined.convergence_distance_mm}";
+        eyeDatas.Add(dataToWrite);
+
+        
     }
 }
