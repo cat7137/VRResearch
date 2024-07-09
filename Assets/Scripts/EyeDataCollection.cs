@@ -6,6 +6,7 @@ using System.IO;
 using System.IO.Enumeration;
 using ViveSR.anipal.Eye;
 using System.Runtime.InteropServices;
+using UnityEditor;
 
 public class EyeDataCollection : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class EyeDataCollection : MonoBehaviour
     {
         
         filePath = Path.Combine(Application.dataPath, "EyeTrackingData.txt");
+        if (File.Exists(filePath)) { 
+            FileUtil.ReplaceFile(filePath, filePath);
+        }
         writer = new StreamWriter(filePath);
         writer.WriteLine("LeftGazeDirection,RightGazeDirection,LeftPupilDiameter(mm),RightPupilDiameter(mm)");
         eyeDatas = new List<string>();
