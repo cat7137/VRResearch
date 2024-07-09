@@ -172,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &49412841
 Transform:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1102555567}
+      - m_Target: {fileID: 1912023248}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -491,7 +491,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &160421942
 MonoBehaviour:
@@ -627,7 +627,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1102555567}
+      - m_Target: {fileID: 1912023248}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -637,7 +637,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &164706508
 MonoBehaviour:
@@ -1010,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.72
       objectReference: {fileID: 0}
+    - target: {fileID: 7873184977108000993, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9014170785475729497, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_EnableInputActions
       value: 1
@@ -1033,9 +1037,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014170785475729474, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1395086478}
-    - targetCorrespondingSourceObject: {fileID: 9014170783705847997, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1691397746}
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
 --- !u!20 &227390800 stripped
 Camera:
@@ -1337,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_RootOrder
@@ -2162,7 +2163,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 481665576}
-  - component: {fileID: 481665577}
   m_Layer: 0
   m_Name: Start Screen
   m_TagString: Untagged
@@ -2191,26 +2191,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &481665577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481665575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIButton: {fileID: 481665575}
-  objects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  btn: {fileID: 735963842}
-  buttonPressed: 0
-  buttonIndex: 0
 --- !u!1 &535683384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,7 +2371,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1102555567}
+      - m_Target: {fileID: 1912023248}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2401,7 +2381,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &592156948
 MonoBehaviour:
@@ -2537,7 +2517,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1102555567}
+      - m_Target: {fileID: 1912023248}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2547,7 +2527,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &605468731
 MonoBehaviour:
@@ -4140,7 +4120,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102555568}
-  - component: {fileID: 1102555569}
   m_Layer: 0
   m_Name: Quiz
   m_TagString: Untagged
@@ -4169,26 +4148,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1102555569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102555567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIButton: {fileID: 1102555567}
-  objects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  btn: {fileID: 160421941}
-  buttonPressed: 0
-  buttonIndex: 0
 --- !u!1001 &1107706860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4269,11 +4228,6 @@ PrefabInstance:
 --- !u!4 &1107706861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f7fbb55eb11fe3459fd3beca3d0dfb0, type: 3}
-  m_PrefabInstance: {fileID: 1107706860}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1107706862 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f7fbb55eb11fe3459fd3beca3d0dfb0, type: 3}
   m_PrefabInstance: {fileID: 1107706860}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1114889305
@@ -4492,13 +4446,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1182764060}
+  - component: {fileID: 1182764061}
   m_Layer: 0
   m_Name: Ready?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1182764060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4520,6 +4475,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1182764061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182764059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIButton: {fileID: 1182764059}
+  objects:
+  - {fileID: 302068067}
+  - {fileID: 1253047146}
+  - {fileID: 49412840}
+  btn: {fileID: 294229503}
+  buttonPressed: 0
+  buttonIndex: 0
 --- !u!1 &1210276183
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,31 +6001,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659418072}
   m_CullTransparentMesh: 1
---- !u!1 &1691397741 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9014170783705847997, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-  m_PrefabInstance: {fileID: 227390799}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1691397746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691397741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIButton: {fileID: 0}
-  objects:
-  - {fileID: 302068067}
-  - {fileID: 668377098}
-  - {fileID: 1107706862}
-  btn: {fileID: 0}
-  buttonPressed: 0
-  buttonIndex: 0
 --- !u!1 &1827650781
 GameObject:
   m_ObjectHideFlags: 0
@@ -6332,7 +6282,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1912023249}
-  - component: {fileID: 1912023250}
   m_Layer: 0
   m_Name: Continue
   m_TagString: Untagged
@@ -6361,26 +6310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1912023250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912023248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIButton: {fileID: 1912023248}
-  objects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  btn: {fileID: 1530681917}
-  buttonPressed: 0
-  buttonIndex: 0
 --- !u!1 &1956884289
 GameObject:
   m_ObjectHideFlags: 0

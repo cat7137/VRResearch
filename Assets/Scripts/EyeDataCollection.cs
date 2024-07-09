@@ -27,7 +27,7 @@ public class EyeDataCollection : MonoBehaviour
         
         filePath = Path.Combine(Application.dataPath, "EyeTrackingData.txt");
         writer = new StreamWriter(filePath);
-        writer.WriteLine("LeftGazeDirection,RightGazeDirection,CombinedConvergenceDistance");
+        writer.WriteLine("LeftGazeDirection,RightGazeDirection,LeftPupilDiameter(mm),RightPupilDiameter(mm)");
         eyeDatas = new List<string>();
         
     }
@@ -94,7 +94,7 @@ public class EyeDataCollection : MonoBehaviour
     private static void EyeCallBack(ref EyeData eye_data)
     {
         eyeData = eye_data;
-        string dataToWrite = $"{eyeData.verbose_data.left.gaze_direction_normalized},{eyeData.verbose_data.right.gaze_direction_normalized},{eyeData.verbose_data.combined.convergence_distance_mm}";
+        string dataToWrite = $"{eyeData.verbose_data.left.gaze_direction_normalized},{eyeData.verbose_data.right.gaze_direction_normalized},{eyeData.verbose_data.left.pupil_diameter_mm},{eyeData.verbose_data.right.pupil_diameter_mm}";
         eyeDatas.Add(dataToWrite);
 
         
