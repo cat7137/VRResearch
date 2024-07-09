@@ -27,10 +27,8 @@ public class EyeDataCollection : MonoBehaviour
     {
         
         filePath = Path.Combine(Application.dataPath, "EyeTrackingData.txt");
-        if (File.Exists(filePath)) { 
-            FileUtil.ReplaceFile(filePath, filePath);
-        }
-        writer = new StreamWriter(filePath);
+
+        writer = new StreamWriter(filePath, false);
         writer.WriteLine("LeftGazeDirection,RightGazeDirection,LeftPupilDiameter(mm),RightPupilDiameter(mm)");
         eyeDatas = new List<string>();
         

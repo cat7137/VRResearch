@@ -1203,18 +1203,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1182764059}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1102555567}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1226,6 +1214,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1182764059}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &294229504
 MonoBehaviour:
@@ -1370,7 +1370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_RootOrder
@@ -1390,31 +1390,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7597958
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.3709673
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.028114405
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.5332009
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 323.58
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 333.99
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 78.81
       objectReference: {fileID: 0}
     - target: {fileID: 2667842542333453429, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_Enabled
@@ -4651,7 +4651,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1182764060}
-  - component: {fileID: 1182764061}
   m_Layer: 0
   m_Name: Ready?
   m_TagString: Untagged
@@ -4680,26 +4679,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1182764061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182764059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIButton: {fileID: 1182764059}
-  objects:
-  - {fileID: 302068067}
-  - {fileID: 1253047146}
-  - {fileID: 49412840}
-  btn: {fileID: 294229503}
-  buttonPressed: 0
-  buttonIndex: 0
 --- !u!1 &1210276183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524506751}
+  - component: {fileID: 1524506752}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -5849,6 +5829,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1524506752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524506750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0378c36b5c81543abb0c5aa7d48df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueUI: {fileID: 1912023248}
+  objects:
+  - {fileID: 302068067}
+  - {fileID: 1253047146}
+  - {fileID: 49412840}
+  readyBtn: {fileID: 294229503}
+  continueButton: {fileID: 1530681917}
+  buttonPressed: 0
+  buttonIndex: -1
+  end: {fileID: 666036276}
+  quiz: {fileID: 1102555567}
 --- !u!1 &1530681915
 GameObject:
   m_ObjectHideFlags: 0
