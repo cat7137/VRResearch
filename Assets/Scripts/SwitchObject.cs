@@ -64,13 +64,15 @@ void Start()
     /// the buttonIndex will increase, reset the buttonPressed bool
     /// and check for three things:
     /// 1. If the buttonIndex is greater than the num of objects
-    /// then the last object's name and rotation coordnates will be 
-    /// recorded and added to the data list, the last object 
+    /// then the last object's name and rotation coordinates will be 
+    /// recorded and added to the data list as well as the camera position
+    /// and rotation coordinates, the last object 
     /// will be set to inactive, and the end screen will appear
     /// 2. If the buttonIndex is Zero, the starting object will be set to active
     /// and the quiz screen will appear 
     /// 3. Otherwise, the current object will be deactivated, its name and last 
-    /// rotation coordinates will be recorded and added to the data list, and the next 
+    /// rotation coordinates will be recorded and added to the data list as well as the camera 
+    /// position/rotation coordinates, and the next 
     /// object will be activated along with the Quiz screen again
     /// </summary>
     void Update()
