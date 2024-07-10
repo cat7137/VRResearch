@@ -1370,7 +1370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_RootOrder
@@ -5867,6 +5867,7 @@ MonoBehaviour:
   continueButton: {fileID: 1530681917}
   buttonPressed: 0
   buttonIndex: -1
+  cameraObject: {fileID: 227390801}
   end: {fileID: 666036276}
   quiz: {fileID: 1102555567}
 --- !u!114 &1524506753

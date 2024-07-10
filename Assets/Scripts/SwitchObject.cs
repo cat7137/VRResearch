@@ -20,7 +20,7 @@ public class SwitchObject : MonoBehaviour
     public bool buttonPressed = false;
     [SerializeField]
     private int buttonIndex = -1;
-
+    public GameObject cameraObject;
     public GameObject end;
     public GameObject quiz;
     private string filePath;
@@ -82,8 +82,14 @@ void Start()
             buttonPressed = false;
             if (buttonIndex > objects.Count - 1)
             {
+                string cameraName = cameraObject.name;
+                string cameraPosition = $"Camera Position: {cameraObject.transform.localPosition}";
+                string cameraRotation = $"Camera Rotation: {cameraObject.transform.localRotation.eulerAngles}";
                 string name = objects[buttonIndex - 1].name;
                 string coords = $"{objects[buttonIndex - 1].transform.localRotation.eulerAngles}";
+                rotationData.Add(cameraName);
+                rotationData.Add(cameraPosition);
+                rotationData.Add(cameraRotation);
                 rotationData.Add(name);
                 rotationData.Add(coords);
                 objects[buttonIndex - 1].SetActive(false);
@@ -97,8 +103,14 @@ void Start()
             else
             {
                 objects[buttonIndex].SetActive(true);
+                string cameraName = cameraObject.name;
+                string cameraPosition = $"Camera Position: {cameraObject.transform.localPosition}";
+                string cameraRotation = $"Camera Rotation: {cameraObject.transform.localRotation.eulerAngles}";
                 string name = objects[buttonIndex - 1].name;
                 string coords = $"{objects[buttonIndex - 1].transform.localRotation.eulerAngles}";
+                rotationData.Add(cameraName);
+                rotationData.Add(cameraPosition);
+                rotationData.Add(cameraRotation);
                 rotationData.Add(name);
                 rotationData.Add(coords);
                 objects[buttonIndex - 1].SetActive(false);
