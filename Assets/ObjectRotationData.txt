@@ -1,0 +1,10 @@
+Main Camera
+Camera Position: (-0.04, 1.18, -0.36)
+Camera Rotation: (348.33, 5.26, 0.03)
+Q25_Slotted link (Grab)
+(327.16, 279.64, 82.41)
+Main Camera
+Camera Position: (-0.03, 1.20, -0.38)
+Camera Rotation: (337.38, 5.40, 358.28)
+Q24_Jig Frame (Grab)
+(13.86, 334.16, 5.88)
