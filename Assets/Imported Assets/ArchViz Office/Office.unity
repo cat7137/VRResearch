@@ -5823,6 +5823,7 @@ GameObject:
   - component: {fileID: 1524506752}
   - component: {fileID: 1524506753}
   - component: {fileID: 1524506754}
+  - component: {fileID: 1524506755}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -5899,6 +5900,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorial: {fileID: 725730666}
   tutorialObject: {fileID: 302068067}
+--- !u!114 &1524506755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524506750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f29e08679e282438d0d0a67f23fc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quiz: {fileID: 1102555567}
+  one: {fileID: 160421941}
+  two: {fileID: 164706507}
+  three: {fileID: 605468730}
+  four: {fileID: 592156947}
 --- !u!1 &1530681915
 GameObject:
   m_ObjectHideFlags: 0
