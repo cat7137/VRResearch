@@ -1390,31 +1390,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5112344
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.49556568
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.47169137
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.52015513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 359.084
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 86.339
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 268.149
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2667842542333453429, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
       propertyPath: m_Enabled
@@ -5822,6 +5822,7 @@ GameObject:
   - component: {fileID: 1524506751}
   - component: {fileID: 1524506752}
   - component: {fileID: 1524506753}
+  - component: {fileID: 1524506754}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -5860,7 +5861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueUI: {fileID: 1912023248}
   objects:
-  - {fileID: 302068067}
   - {fileID: 1253047146}
   - {fileID: 49412840}
   readyBtn: {fileID: 294229503}
@@ -5885,6 +5885,20 @@ MonoBehaviour:
   timer: {fileID: 1310985456}
   stop: {fileID: 666036276}
   startButton: {fileID: 735963842}
+--- !u!114 &1524506754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524506750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96bdbfdb44c412458be8411bb1e8a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 725730666}
+  tutorialObject: {fileID: 302068067}
 --- !u!1 &1530681915
 GameObject:
   m_ObjectHideFlags: 0
