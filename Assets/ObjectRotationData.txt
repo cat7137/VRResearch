@@ -1,10 +1,50 @@
 Main Camera
-Camera Position: (-0.04, 1.18, -0.36)
-Camera Rotation: (348.33, 5.26, 0.03)
+Camera Position: (-0.01, 1.21, -0.35)
+Camera Rotation: (342.00, 3.29, 359.27)
 Q25_Slotted link (Grab)
-(327.16, 279.64, 82.41)
+(293.25, 0.93, 350.37)
 Main Camera
-Camera Position: (-0.03, 1.20, -0.38)
-Camera Rotation: (337.38, 5.40, 358.28)
+Camera Position: (0.00, 1.20, -0.34)
+Camera Rotation: (343.68, 3.16, 359.45)
 Q24_Jig Frame (Grab)
-(13.86, 334.16, 5.88)
+(331.22, 340.23, 32.40)
+Main Camera
+Camera Position: (0.01, 1.20, -0.34)
+Camera Rotation: (344.09, 5.11, 358.63)
+Q23_Bracket (Grab)
+(31.74, 280.69, 80.02)
+Main Camera
+Camera Position: (0.00, 1.21, -0.32)
+Camera Rotation: (339.87, 0.97, 0.59)
+Q22_Bracket (Grab)
+(354.14, 4.00, 236.67)
+Main Camera
+Camera Position: (-0.01, 1.20, -0.32)
+Camera Rotation: (341.64, 358.43, 358.94)
+Q21_Half Clip (Grab)
+(354.76, 5.48, 301.44)
+Main Camera
+Camera Position: (0.00, 1.20, -0.31)
+Camera Rotation: (345.04, 5.63, 359.05)
+Q20_Bracket (Grab)
+(352.79, 6.91, 67.72)
+Main Camera
+Camera Position: (0.00, 1.20, -0.32)
+Camera Rotation: (344.10, 4.22, 359.86)
+Q19-Forked Bracket (Grab)
+(18.65, 335.74, 190.34)
+Main Camera
+Camera Position: (0.00, 1.20, -0.31)
+Camera Rotation: (343.67, 6.59, 0.22)
+Q18-Clamp (Grab)
+(301.77, 27.09, 14.57)
+Main Camera
+Camera Position: (-0.01, 1.19, -0.31)
+Camera Rotation: (347.57, 5.88, 0.31)
+Q17-Guide Bracket (Grab)
+(286.18, 328.30, 104.51)
+Main Camera
+Camera Position: (0.00, 1.20, -0.32)
+Camera Rotation: (343.53, 359.63, 0.71)
+Q16_Socket (Grab)
+(330.41, 32.46, 241.66)
