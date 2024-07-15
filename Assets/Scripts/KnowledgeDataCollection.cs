@@ -8,20 +8,20 @@ public class KnowledgeDataCollection : MonoBehaviour
 {
 
     public GameObject quiz;
+    public Button zero;
     public Button one;
     public Button two;
     public Button three;
-    public Button four;
     private List<string> dataCollection;
     private StreamWriter writer;
     private string filePath;
 
     private void Awake()
     {
+        zero.onClick.AddListener(ReturnZero);
         one.onClick.AddListener(ReturnOne);
         two.onClick.AddListener(ReturnTwo);
         three.onClick.AddListener(ReturnThree);
-        four.onClick.AddListener(ReturnFour);
     }
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,11 @@ public class KnowledgeDataCollection : MonoBehaviour
         
     }
 
+    void ReturnZero()
+    {
+        dataCollection.Add("0");
+    }
+
     void ReturnOne()
     {
         dataCollection.Add("1");
@@ -47,13 +52,8 @@ public class KnowledgeDataCollection : MonoBehaviour
         dataCollection.Add("2");
     }
 
-    void ReturnThree()
-    {
+    void ReturnThree(){
         dataCollection.Add("3");
-    }
-
-    void ReturnFour(){
-        dataCollection.Add("4");
     }
 
     private void OnApplicationQuit()
