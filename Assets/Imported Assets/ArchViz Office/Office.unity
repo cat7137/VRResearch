@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 160421942}
   - component: {fileID: 160421941}
   m_Layer: 0
-  m_Name: 1 (Button)
+  m_Name: 0 (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1623,7 +1623,7 @@ GameObject:
   - component: {fileID: 164706508}
   - component: {fileID: 164706507}
   m_Layer: 0
-  m_Name: 2 (Button)
+  m_Name: 1 (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3711,7 +3711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4648,7 +4648,7 @@ GameObject:
   - component: {fileID: 592156948}
   - component: {fileID: 592156947}
   m_Layer: 0
-  m_Name: 4 (Button)
+  m_Name: 3 (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4794,7 +4794,7 @@ GameObject:
   - component: {fileID: 605468731}
   - component: {fileID: 605468730}
   m_Layer: 0
-  m_Name: 3 (Button)
+  m_Name: 2 (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8316,7 +8316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12243,6 +12243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorial: {fileID: 725730666}
   tutorialObject: {fileID: 302068067}
+  ready: {fileID: 1182764059}
 --- !u!114 &1524506755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12256,10 +12257,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quiz: {fileID: 1102555567}
-  zero: {fileID: 0}
-  one: {fileID: 160421941}
-  two: {fileID: 164706507}
-  three: {fileID: 605468730}
+  zero: {fileID: 160421941}
+  one: {fileID: 164706507}
+  two: {fileID: 605468730}
+  three: {fileID: 592156947}
 --- !u!114 &1524506756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12274,6 +12275,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1489810877}
   tutorialObject: {fileID: 302068067}
+  tutorialButton1: {fileID: 1257417378}
+  tutorialButton2: {fileID: 1379716803}
+  backButton1: {fileID: 1007946231}
+  backButton2: {fileID: 266221678}
 --- !u!114 &1524506757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12288,6 +12293,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorial: {fileID: 349786147}
   tutorialObject: {fileID: 302068067}
+  tutorialButton1: {fileID: 1257417378}
+  tutorialButton2: {fileID: 1379716803}
+  backButton1: {fileID: 1007946231}
+  backButton2: {fileID: 266221678}
 --- !u!1 &1530681915
 GameObject:
   m_ObjectHideFlags: 0
@@ -13411,7 +13420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14073,7 +14082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
