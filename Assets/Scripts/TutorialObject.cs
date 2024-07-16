@@ -6,7 +6,8 @@ public class TutorialObject : MonoBehaviour
 {
 
     public GameObject tutorial;
-    public GameObject tutorialObject; 
+    public GameObject tutorialObject;
+    public GameObject ready;
 
     
 
@@ -23,9 +24,11 @@ public class TutorialObject : MonoBehaviour
         {
             tutorialObject.SetActive(true);
         }
-        else
+
+        if (ready.activeSelf)
         {
             tutorialObject.SetActive(false);
         }
+       
     }
 }
